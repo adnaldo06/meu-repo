@@ -1,0 +1,20 @@
+sudo mkdir /publico /adm /ven /sec
+sudo groupadd GRP_ADM
+sudo groupadd GRP_VEN
+sudo groupadd GRP_SEC
+sudo useradd carlos -m -G GRP_ADM -s /bin/bash -p $(openssl passwd -6 abcd@1234)
+sudo useradd maria -m -G GRP_ADM -s /bin/bash -p $(openssl passwd -6 abcd@1234)
+sudo useradd joao -m -G GRP_ADM -s /bin/bash -p $(openssl passwd -6 abcd@1234)
+sudo useradd debora -m -G GRP_VEN -s /bin/bash -p $(openssl passwd -6 abcd@1234)
+sudo useradd sebastiana -m -G GRP_VEN -s /bin/bash -p $(openssl passwd -6 abcd@1234)
+sudo useradd roberto -m -G GRP_VEN -s /bin/bash -p $(openssl passwd -6 abcd@1234)
+sudo useradd josefina -m -G GRP_SEC -s /bin/bash -p $(openssl passwd -6 abcd@1234)
+sudo useradd amanda -m -G GRP_SEC -s /bin/bash -p $(openssl passwd -6 abcd@1234)
+sudo useradd rogerio -m -G GRP_SEC -s /bin/bash -p $(openssl passwd -6 abcd@1234)
+sudo chgrp GRP_ADM /adm
+sudo chgrp GRP_VEN /ven
+sudo chgrp GRP_SEC /sec
+sudo chmod 770 /adm
+sudo chmod 770 /ven
+sudo chmod 770 /sec
+sudo chmod 777 /publico
