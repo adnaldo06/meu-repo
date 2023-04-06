@@ -1,7 +1,3 @@
-atualizar servidor
-instalar apache 2
-instalar unzip
-
 sudo apt update
 sudo apt upgrade -y
 sudo apt install apache2 -y
